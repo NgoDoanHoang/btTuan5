@@ -40,24 +40,7 @@ void count_mine()
     for(int j =0; j<N;j++)
     if(B[i][j] != MINE)
     {
-        int cnt = 0;
-        if( j>0 && B[i][j-1]==MINE )
-            cnt++;
-        if( i<M-1 && j>0 && B[i+1][j-1]==MINE )
-            cnt++;
-        if( i<M-1 && B[i+1][j]==MINE )
-            cnt++;
-        if( i<M-1 && j<N-1 && B[i+1][j+1]==MINE )
-            cnt++;
-        if( j<N-1 && B[i][j+1]==MINE )
-            cnt++;
-        if( i>0 && j<N-1 && B[i-1][j+1]==MINE )
-            cnt++;
-        if( i>0 && B[i-1][j]==MINE )
-            cnt++;
-        if( i>0 && j>0 && B[i-1][j-1]==MINE )
-            cnt++;
-        B[i][j]=cnt;
+        ////
     }
 }
 void map_mine()
@@ -113,6 +96,5 @@ int main()
         }
         in_map(r,c);
     }
-    getch();
     return 0;
 }
